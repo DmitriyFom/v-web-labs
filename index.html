@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Магазин одежды</title>
+  <link rel="stylesheet" href="/src/style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">🏠</div>
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Поиск товаров..." />
+    </div>
+    <div class="icons">
+      <span>💓</span>
+      <span>🧺</span>
+    </div>
+  </header>
+  <main class="main">
+    <section class="category">
+      <h2>Худи</h2>
+      <div class="products-grid">
+        <article class="product-card" data-name="Худи с принтом">
+          <img src="/images/hoodie1.jpg" alt="Худи с принтом" />
+          <div class="product-info">
+            <p class="price">999 ₽</p>
+            <p class="name">Худи с принтом</p>
+             <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="1">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Черное худи">
+          <img src="/images/hoodie2.jpeg" alt="Черное худи" />
+          <div class="product-info">
+            <p class="price">1299 ₽</p>
+            <p class="name">Черное худи</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="2">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Серое худи">
+          <img src="/images/hoodie3.jpg" />
+          <div class="product-info">
+            <p class="price">🔖1099 ₽</p>
+            <p class="name">Серое худи</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="3">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Худи Oversize">
+          <img src="/images/hoodie3.jpg"/>
+          <div class="product-info">
+            <p class="price">1499 ₽</p>
+            <p class="name">Худи Oversize</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="4">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Худи с капюшоном">
+          <img src="/images/hoodie3.jpg"/>
+          <div class="product-info">
+            <p class="price">1199 ₽</p>
+            <p class="name">Худи с капюшоном</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="5">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Худи унисекс">
+          <img src="/images/hoodie3.jpg"  />
+          <div class="product-info">
+            <p class="price">1399 ₽</p>
+            <p class="name">Худи унисекс</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="6">В корзину</button>
+        </article>
+      </div>
+    </section>
+    <section class="category">
+      <h2>Шорты</h2>
+      <div class="products-grid">
+        <article class="product-card" data-name="Шорты спортивные">
+          <img src="/images/shorts.jpg" />
+          <div class="product-info">
+            <p class="price">🔖799 ₽</p>
+            <p class="name">Шорты спортивные</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="7">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Шорты джинсовые">
+          <img src="/images/shorts.jpg" />
+          <div class="product-info">
+            <p class="price">1599 ₽</p>
+            <p class="name">Шорты джинсовые</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="8">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Шорты беговые">
+          <img src="/images/shorts.jpg" />
+          <div class="product-info">
+            <p class="price">899 ₽</p>
+            <p class="name">Шорты беговые</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="9">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Шорты пляжные">
+          <img src="/images/shorts.jpg" />
+          <div class="product-info">
+            <p class="price">699 ₽</p>
+            <p class="name">Шорты пляжные</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="10">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Шорты с карманами">
+          <img src="/images/shorts.jpg" />
+          <div class="product-info">
+            <p class="price">999 ₽</p>
+            <p class="name">Шорты с карманами</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="11">В корзину</button>
+        </article>
+        <article class="product-card" data-name="Шорты хлопковые">
+          <img src="/images/shorts.jpg" />
+          <div class="product-info">
+            <p class="price">849 ₽</p>
+            <p class="name">Шорты хлопковые</p>
+              <button class="favorite-btn" data-product-id="1">❤️</button>
+          </div>
+          <button class="add-to-cart-btn" data-product-id="12">В корзину</button>
+        </article>
+      </div>
+    </section>
+  </main>
+  <nav class="mobile-nav">
+    <a href="#" class="nav-item active">🏠 Главная</a>
+    <a href="#" class="nav-item">💓 Избранное</a>
+    <a href="#" class="nav-item">🧺 Корзина</a>
+  </nav>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <p>© 2025 Магазин</p>
+      <a href="#">Политика и безопасность</a>
+      <a href="#">Cookie</a>
+    </div>
+  </div>
+</footer>
+
+<nav class="mobile-nav">
+  <a href="#" class="nav-item active">🏠 Главная</a>
+  <a href="#" class="nav-item">❤️ Избранное</a>
+  <a href="#" class="nav-item">🛒 Корзина</a>
+</nav>
+</html>
