@@ -1,10 +1,26 @@
 import { useState } from 'react';
-import { AddToCartButton } from '../../features/cart/ui/AddToCartButton'; // Убрано .jsx
-import { type TProduct } from '../../types/Product'; // Импорт типа
+import { AddToCartButton } from '../../features/cart/ui/AddToCartButton'; 
 
-// Указание типа для параметра product
-export const ProductCard = ({ product }: { product: TProduct }) => {
-  const [isFavorite, setIsFavorite] = useState(false);
+type TProduct = {
+  id: number;
+  name: string;
+  price: number;
+  image: string;
+};
+
+
+type ProductCardProps = {
+  product: TProduct;
+};
+
+export const ProductCard = ({ product }: ProductCardProps) => {
+
+  const [isFavorite, setIsFavorite] = useState<boolean>(false);
+
+  // Типизация обработчика события
+  const handleFavoriteClick = (): void => {
+    setIsFavorite(!isFavorite);
+  };
 
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden flex flex-col h-full">
@@ -15,7 +31,7 @@ export const ProductCard = ({ product }: { product: TProduct }) => {
           className="w-full h-48 object-cover"
         />
         <button
-          onClick={() => setIsFavorite(!isFavorite)}
+          onClick={handleFavoriteClick}
           className="absolute top-2 right-2 text-gray-400 hover:text-red-500 transition-colors"
         >
           {isFavorite ? '❤️' : '🤍'}

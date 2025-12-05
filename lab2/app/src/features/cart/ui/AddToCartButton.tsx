@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
-type TAddToCartButtonProps = {
+type AddToCartButtonProps = {
   productId: number; 
-
 };
 
-export const AddToCartButton = ({ productId }: TAddToCartButtonProps) => {
+export const AddToCartButton = ({ productId }: AddToCartButtonProps) => {
   const [inCart, setInCart] = useState(false);
 
   const handleClick = () => {
