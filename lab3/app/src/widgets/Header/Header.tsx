@@ -9,24 +9,31 @@ export const Header = () => {
   );
 
   return (
-    <header className="p-4 bg-white shadow flex justify-between items-center">
-      <Link to="/">👕</Link>
-      <input
-        type="text"
-        value={searchQuery}
-        onChange={(e) => setSearchQuery(e.target.value)}
-        placeholder="Поиск..."
-        className="border px-2 py-1 w-64"
-      />
-      <div>
-        <Link to="/favorites" className="mr-4">❤️</Link>
-        <Link to="/cart" className="relative">🛒
-          {totalItems > 0 && (
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white rounded-full w-5 h-5 flex items-center justify-center text-xs">
-              {totalItems}
-            </span>
-          )}
-        </Link>
+    <header className="bg-white shadow-sm sticky top-0 z-10">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        <Link to="/" className="text-2xl">👕</Link>
+
+        <div className="flex-1 max-w-md mx-4">
+          <input
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            placeholder="Поиск товаров..."
+            className="w-full px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div className="flex gap-4 text-xl">
+          <Link to="/favorites">❤️</Link>
+          <Link to="/cart" className="relative">
+            🛒
+            {totalItems > 0 && (
+              <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center">
+                {totalItems}
+              </span>
+            )}
+          </Link>
+        </div>
       </div>
     </header>
   );

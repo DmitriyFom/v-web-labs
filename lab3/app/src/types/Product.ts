@@ -1,8 +1,8 @@
+// src/types/Product.ts
 export type TProduct = {
-  id: number; // или string, в зависимости от твоего выбора
+  id: number;
   name: string;
   price: number;
-  category: string; // если используется
+  category: string;
   image: string;
-  // discountPrice?: number; // если используется
 };

@@ -1,3 +1,4 @@
+// src/store/createStore.ts
 import { createStore } from 'zustand';
 import { type TStoreState } from '../types/store';
 
@@ -7,6 +8,7 @@ export const populateStore = (initialState: Pick<TStoreState, 'products'>) =>
     searchQuery: '',
     favorites: [],
     cart: [],
+    selectedItems: [],
 
     setSearchQuery: (query) => set({ searchQuery: query }),
 
@@ -52,6 +54,19 @@ export const populateStore = (initialState: Pick<TStoreState, 'products'>) =>
         ),
       });
     },
+    toggleItemSelection: (id) => {
+      set((state) => {
+        const isSelected = state.selectedItems.includes(id);
+        return {
+          selectedItems: isSelected
+            ? state.selectedItems.filter(itemId => itemId !== id)
+            : [...state.selectedItems, id],
+        };
+      });
+    },
+
+    selectAllItems: (ids) => set({ selectedItems: ids }),
+    clearSelection: () => set({ selectedItems: [] }),
 
     clearCart: () => set({ cart: [] }),
   }));
